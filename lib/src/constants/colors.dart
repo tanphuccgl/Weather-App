@@ -14,6 +14,8 @@ class XColorLight {
   static Color secondary = charcoal.withOpacity(.6);
   static Color tertiary = charcoal.withOpacity(.3);
   static Color quaternary = charcoal.withOpacity(.18);
+
+  static const Color brightGray = Color(0xFFF5F5EB);
 }
 
 class XWeatherColor {
@@ -24,9 +26,9 @@ class XWeatherColor {
   static const Color grape = Color(0xFF612FAB);
 
   // gradient
-  static const List<Color> linear1 = [
-    Color(0xFF2E335A),
-    Color(0xFF1C1B33),
+  static List<Color> linear1 = [
+    const Color(0xFF2E335A).withOpacity(.7),
+    const Color(0xFF1C1B33).withOpacity(.7),
   ];
 
   static const List<Color> linear2 = [
@@ -52,9 +54,9 @@ class XWeatherColor {
 }
 
 class XGradient {
-  static const LinearGradient linear1 = LinearGradient(
+  static LinearGradient linear1 = LinearGradient(
     colors: XWeatherColor.linear1,
-    stops: [
+    stops: const [
       0.0,
       1.0,
     ],
